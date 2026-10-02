@@ -1,0 +1,32 @@
+export const ROUTES = {
+  HOME: '/',
+  PROPERTIES: '/properties',
+  PROPERTY_DETAILS: (id: string = ':id') => `/properties/${id}`,
+  ABOUT: '/about',
+  INQUIRIES: '/inquiries',
+  INQUIRY_DETAILS: (id: string = ':id') => `/inquiries/${id}`,
+  LOGIN: '/login',
+  REGISTER: '/register',
+  FORGOT_PASSWORD: '/forgot-password',
+  DASHBOARD: {
+    ROOT: '/dashboard',
+    FAVORITES: '/dashboard/favorites',
+    SAVED_SEARCHES: '/dashboard/saved-searches',
+    LISTINGS: '/dashboard/listings',
+    INQUIRIES: '/dashboard/inquiries',
+    MESSAGES: '/dashboard/messages',
+    NOTIFICATIONS: '/dashboard/notifications',
+    REVIEWS: '/dashboard/reviews',
+    PROFILE: '/dashboard/profile',
+  },
+  SELL: {
+    ROOT: '/sell',
+    EDIT: (id: string = ':id') => `/sell/edit/${id}`,
+  },
+  ADMIN: {
+    ROOT: '/admin',
+    PROPERTIES: '/admin/properties',
+    USERS: '/admin/users',
+    REPORTS: '/admin/reports',
+  },
+} as const;

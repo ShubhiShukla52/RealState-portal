@@ -1,0 +1,100 @@
+# ==============================================================================
+# EstateX - Root .gitignore
+# Applies to the entire EstateX project (Frontend/, Backend/, Database/)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Dependencies
+# ------------------------------------------------------------------------------
+node_modules/
+/.pnp
+.pnp.js
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Secrets Protection
+# ------------------------------------------------------------------------------
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Keep .env.example trackable across the entire project
+!.env.example
+!**/.env.example
+
+# Secret keys, private certificates, and credentials
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+*.secret
+*secret*.json
+*credential*.json
+*credentials*.json
+
+# Supabase / DB secrets & local credentials
+supabase/.temp/
+
+# ------------------------------------------------------------------------------
+# Build & Compilation Output
+# ------------------------------------------------------------------------------
+dist/
+build/
+coverage/
+.vite/
+out/
+.output/
+.next/
+.nuxt/
+.turbo/
+.parcel-cache/
+
+# Build caches (keep tsconfig.json and tsconfig*.json trackable)
+*.tsbuildinfo
+
+# ------------------------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------------------------
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# Operating System Files
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ------------------------------------------------------------------------------
+# IDE & Editor Local Files
+# ------------------------------------------------------------------------------
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------------------------
+# Temporary & Cache Files
+# ------------------------------------------------------------------------------
+*.tmp
+*.temp
+*.cache
+.eslintcache
+.stylelintcache
